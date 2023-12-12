@@ -43,4 +43,4 @@ class BoardTopicsTests(TestCase):
         board_topics_url = reverse('board_topics', kwargs={'pk': 1})
         response = self.client.get(board_topics_url)
         home_url = reverse('home')
-        self.assertContains(self.response, 'href="{0}"'.format(home_url))
+        self.assertContains(response, 'href="{0}"'.format(home_url))
