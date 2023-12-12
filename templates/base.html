@@ -30,14 +30,14 @@
                   <!-- <a class="dropdown-item" href="{% url 'logout' %}">退出账号</a> -->
                   <form method="post" action="{% url 'logout' %}">
                     {% csrf_token %}
-                    <button type="submit">退出账号</button>
+                    <a class="dropdown-item"><button type="submit">退出账号</button></a>
                   </form>
                 </div>
               </li>
             </ul>
           {% else %}
             <form class="form-inline ml-auto">
-              <a href="#" class="btn btn-outline-secondary">Log in</a>
+              <a href="{% url 'login' %}" class="btn btn-outline-secondary">Log in</a>
               <a href="{% url 'signup' %}" class="btn btn-primary ml-2">Sign up</a>
             </form>
           {% endif %}
