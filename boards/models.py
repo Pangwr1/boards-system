@@ -16,7 +16,7 @@ class Topic(models.Model):
     starter = models.ForeignKey(User, related_name='topics', on_delete=models.DO_NOTHING)
 
 class Post(models.Model):
-    massage = models.TextField(max_length=4000)
+    message = models.TextField(max_length=4000)
     topic = models.ForeignKey(Topic, related_name='posts', on_delete=models.DO_NOTHING)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(null=True)

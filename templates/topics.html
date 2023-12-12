@@ -10,5 +10,30 @@
 {% endblock %}
 
 {% block content %}
-    <!-- just leaving it empty for now. we will add core here soon. -->
+  <div class="mb-4">
+    <a href="{% url 'new_topic' board.pk %}" class="btn btn-primary">创建新主题</a>
+  </div>
+
+  <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+        <th>主题</th>
+        <th>创建者</th>
+        <th>素材数</th>
+        <th>关注数</th>
+        <th>最近更新</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for topic in board.topics.all %}
+        <tr>
+          <td>{{ topic.subject }}</td>
+          <td>{{ topic.starter.username }}</td>
+          <td>0</td>
+          <td>0</td>
+          <td>{{ topic.last_updated }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 {% endblock %}
