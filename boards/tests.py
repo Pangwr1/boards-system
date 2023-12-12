@@ -1,6 +1,7 @@
 from django.test import TestCase
 from django.urls import reverse, resolve
 from django.contrib.auth.models import User
+from boards.forms import NewTopicForm
 
 from boards.models import Board, Topic, Post
 from boards.views import board_topics, home, new_topic
@@ -96,7 +97,9 @@ class NewTopicTests(TestCase):
         url = reverse('new_topic', kwargs={'pk': 1})
         data = {}
         response = self.client.post(url, data)
+        form = response.context.get('form')
         self.assertEquals(response.status_code, 200)
+        self.assertTrue(form.errors)
 
     def test_new_topic_invalid_post_data_empty_fields(self):
         url = reverse('new_topic', kwargs={'pk': 1})
@@ -108,3 +111,9 @@ class NewTopicTests(TestCase):
         self.assertEquals(response.status_code, 200)
         self.assertFalse(Topic.objects.exists())
         self.assertFalse(Post.objects.exists())
+    
+    def test_contains_form(self):
+        url = reverse('new_topic', kwargs={'pk': 1})
+        response = self.client.get(url)
+        form = response.context.get('form')
+        self.assertIsInstance(form, NewTopicForm)
