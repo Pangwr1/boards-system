@@ -1,8 +1,8 @@
 from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 from boards.forms import NewTopicForm
-
 from boards.models import Board, Post, Topic
 
 # Create your views here.
@@ -14,9 +14,10 @@ def board_topics(request, pk):
     board = get_object_or_404(Board, pk=pk)
     return render(request, 'topics.html', {'board': board})
 
+@login_required
 def new_topic(request, pk):
     board = get_object_or_404(Board, pk=pk)
-    user = User.objects.first() # TODO: get the currently logged in user
+    user = request.user
 
     if request.method == 'POST':
         form = NewTopicForm(request.POST)
