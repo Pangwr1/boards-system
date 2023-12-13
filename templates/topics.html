@@ -20,14 +20,14 @@
         <th>主题</th>
         <th>创建者</th>
         <th>素材数</th>
-        <th>关注数</th>
+        <th>浏览数</th>
         <th>最近更新</th>
       </tr>
     </thead>
     <tbody>
       {% for topic in board.topics.all %}
         <tr>
-          <td>{{ topic.subject }}</td>
+          <td><a href="{% url 'topic_posts' board.pk topic.pk %}">{{ topic.subject }}</a></td>
           <td>{{ topic.starter.username }}</td>
           <td>0</td>
           <td>0</td>
