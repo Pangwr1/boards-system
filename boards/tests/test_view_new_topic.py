@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 from boards.forms import NewTopicForm
 from boards.models import Board, Topic, Post
-from boards.views import board_topics, home, new_topic
+from boards.views import new_topic
 
 class NewTopicTests(TestCase):
     def setUp(self) -> None:
