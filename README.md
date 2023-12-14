@@ -89,7 +89,7 @@ $ source venv/bin/activate
 Run server:
 
 ```bash
-python manage.py runserver
+(venv) $ python manage.py runserver
 ```
 
 Then, open `http://127.0.0.1:8000/` or `http://localhost:8000/` in your Web browser, you will see the system's webpage.
