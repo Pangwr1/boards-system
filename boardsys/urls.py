@@ -25,7 +25,7 @@ urlpatterns = [
     re_path(r'^$', views.BoardListView.as_view(), name='home'),
     re_path(r'^signup/$', accounts_views.signup, name='signup'),
     re_path(r'^login/$', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
-    re_path(r'^logout/$', auth_views.LogoutView.as_view(), name='logout'),
+    re_path(r'^logout/$', auth_views.LogoutView.as_view(template_name='logout.html'), name='logout'),
 
     re_path(
         r'^reset/$', 
