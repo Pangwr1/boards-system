@@ -48,6 +48,9 @@ class Topic(models.Model):
         if self.has_many_pages(count):
             return range(1, 5)
         return range(1, count + 1)
+    
+    def get_last_three_posts(self):
+        return self.posts.order_by('-created_at')[:3]
 
 class Post(models.Model):
     message = models.TextField(max_length=4000)
