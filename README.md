@@ -1,8 +1,8 @@
 # A Board-Based System
 
-Thanks [Vitor Freitas](https://simpleisbetterthancomplex.com/about/) for providing an amazing tutorials [A Complete Beginner's Guide to Django](https://simpleisbetterthancomplex.com/series/beginners-guide/1.11/)!!!
+Thanks [Vitor Freitas](https://simpleisbetterthancomplex.com/about/) for providing an amazing tutorials [A Complete Beginner's Guide to Django](https://simpleisbetterthancomplex.com/series/beginners-guide/1.11/) !!!
 
-BTW, thanks to [Stack Overflow](https://stackoverflow.com/)!!!
+BTW, thanks to [Stack Overflow](https://stackoverflow.com/) !!!
 
 ## Features
 
@@ -22,8 +22,8 @@ BTW, thanks to [Stack Overflow](https://stackoverflow.com/)!!!
 
 ## TODO
 
-- [x] Delete Topic or Post
-- [x] Search Bar
+- [ ] Delete Topic or Post
+- [ ] Search Bar
 
 ## Build
 
