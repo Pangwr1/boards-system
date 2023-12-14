@@ -58,7 +58,7 @@ $ deactive
 Install Requirements:
 
 ```bash
-$ pip install -r requirements.txt
+(venv) $ pip install -r requirements.txt
 ```
 
 Clone this repository:
