@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load humanize %}
+
 {% block breadcrumb %}
   <li class="breadcrumb-item active">写作素材</li>
 {% endblock %}
@@ -32,7 +34,7 @@
               {% if post %}
                 <!-- <small> -->
                   <a href="{% url 'topic_posts' board.pk post.topic.pk %}">
-                    {{ post.created_by.username }} 更新于 {{ post.created_at }}
+                    {{ post.created_by.username }} 更新于 {{ post.created_at|naturaltime }}
                   </a>
                 <!-- </small> -->
               {% else %}
