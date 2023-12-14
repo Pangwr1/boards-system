@@ -4,6 +4,19 @@
 
 {% block title %}分享素材{% endblock %}
 
+{% block stylesheet %}
+  <!-- <link rel="stylesheet" href="{% static 'css/simplemde.min.css' %}"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+{% endblock %}
+
+{% block javascript %}
+  <!-- <script src="{% static 'js/simplemde.min.js' %}"></script> -->
+  <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+  <script>
+    var simplemde = new SimpleMDE();
+  </script>
+{% endblock %}
+
 {% block breadcrumb %}
   <li class="breadcrumb-item"><a href="{% url 'home' %}">写作素材</a></li>
   <li class="breadcrumb-item"><a href="{% url 'board_topics' topic.board.pk %}">{{ topic.board.name }}</a></li>
