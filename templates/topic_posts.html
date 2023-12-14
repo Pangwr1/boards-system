@@ -29,7 +29,7 @@
           <div class="col-2">
             <!-- <img src="{% static 'img/app_avatar.svg' %}" alt="{{ post.created_by.username }}" class="w-100"> -->
             <img src="{{ post.created_by|gravatar }}" alt="{{ post.created_by.username }}" class="w-100">
-            <small>Posts: {{ post.created_by.posts.count }}</small>
+            <small>分享数量: {{ post.created_by.posts.count }}</small>
           </div>
           <div class="col-10">
             <div class="row mb-3">
