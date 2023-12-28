@@ -55,17 +55,17 @@ $ deactive
 
 > If you active the virtual environemnt, you can see `(venv)` before your terminal prompt.
 
-Install Requirements:
-
-```bash
-(venv) $ pip install -r requirements.txt
-```
-
 Clone this repository:
 
 ```bash
 $ git clone https://github.com/vanJker/boards-system
 $ cd boards-system
+```
+
+Install Requirements:
+
+```bash
+(venv) $ pip install -r requirements.txt
 ```
 
 Make migrations:
