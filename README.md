@@ -13,16 +13,17 @@ BTW, thanks to [Stack Overflow](https://stackoverflow.com/) !!!
 - User Sign Up, Login, Logout
 - Password Change
 - Password Reset by Email
-- User Authentication Protection for Operations about create, edit
+- User Authentication Protection for Operations about creation, edition, deletion
 - Account Personalize Settings
 - Humanize Pagination for Topic, Post
 - Markdown Render and Editor for Editing Message
 - Humanize Time Representation
 - Randomize-Generation Gravatar
+- Admin management include Board and Topic
 
 ## TODO
 
-- [ ] Delete Topic or Post
+- [x] Delete Topic or Post
 - [ ] Search Bar
 
 ## Build
